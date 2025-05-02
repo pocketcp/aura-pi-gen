@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Project Oriel
+Description=A simple boot splash for Project Oriel
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/project-oriel
+ScriptFile=/usr/share/plymouth/themes/project-oriel/project-oriel.script 

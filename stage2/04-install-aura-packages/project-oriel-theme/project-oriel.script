@@ -1,0 +1,6 @@
+boot_image = Image ("boot-screen.png");
+boot_image.SetPosition (0.5, 0.5);
+
+fun main () {
+    SetBackground (boot_image);
+} 

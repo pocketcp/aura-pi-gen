@@ -50,3 +50,5 @@ unclutter
 udev
 libudev-dev
 ntp
+
+plymouth
