@@ -5,3 +5,48 @@ htop
 python3
 openssh-server
 bash-completion
+
+# SSH and networking
+wpasupplicant
+wireless-tools
+network-manager
+net-tools
+wget
+rsync
+
+# Audio: Input + Output
+alsa-utils
+pulseaudio
+pulseaudio-utils
+pavucontrol
+linux-sound-base
+libasound2
+libpulse-dev
+libsox-fmt-mp3
+sox  # for basic audio recording/playing/testing
+
+# Video & audio playback (podcasts, media)
+gstreamer1.0-tools
+gstreamer1.0-plugins-base
+gstreamer1.0-plugins-good
+gstreamer1.0-plugins-bad
+gstreamer1.0-plugins-ugly
+gstreamer1.0-libav
+gstreamer1.0-pulseaudio
+
+# QT Runtime (headless)
+qtbase5-dev
+qt5-qmake
+qtbase5-dev-tools
+libqt5gui5
+libqt5widgets5
+libqt5multimedia5
+libqt5multimediawidgets5
+libqt5multimedia5-plugins
+libqt5network5
+
+# System utilities
+unclutter
+udev
+libudev-dev
+ntp
