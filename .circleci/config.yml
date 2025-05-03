@@ -22,23 +22,17 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Working Directory
-          command: pwd
-      - run:
-          name: List Directory
-          command: ls -la
-      - run:
           name: Build with Docker
           command: |
             echo "Current directory: $(pwd)"
             echo "Listing files:"
             ls -la
-            if [ ! -f ./build-docker.sh ]; then
+            if [ ! -f /root/aura-pi-gen/build-docker.sh ]; then
               echo "ERROR: build-docker.sh not found in $(pwd)"
               exit 1
             fi
-            chmod +x ./build-docker.sh
-            ./build-docker.sh
+            chmod +x /root/aura-pi-gen/build-docker.sh
+            /root/aura-pi-gen/build-docker.sh
       - store_artifacts:
           path: deploy
 
