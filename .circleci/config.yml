@@ -13,7 +13,7 @@ executors:
 jobs:
   test:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/node:current
     steps:
       - checkout
       # Replace this with a real test runner invocation
@@ -33,7 +33,7 @@ jobs:
 
   deploy:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/node:current
     steps:
       - checkout
       - run:
