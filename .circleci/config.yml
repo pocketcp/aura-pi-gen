@@ -21,18 +21,20 @@ jobs:
     executor: docker-executor
     steps:
       - checkout
+      - setup_remote_docker:
+          version: 20.10.7
       - run:
           name: Build with Docker
           command: |
             echo "Current directory: $(pwd)"
             echo "Listing files:"
             ls -la
-            if [ ! -f /root/aura-pi-gen/build-docker.sh ]; then
+            if [ ! -f ./build-docker.sh ]; then
               echo "ERROR: build-docker.sh not found in $(pwd)"
               exit 1
             fi
-            chmod +x /root/aura-pi-gen/build-docker.sh
-            /root/aura-pi-gen/build-docker.sh
+            chmod +x ./build-docker.sh
+            ./build-docker.sh
       - store_artifacts:
           path: deploy
 
