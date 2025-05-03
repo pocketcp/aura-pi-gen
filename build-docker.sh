@@ -38,11 +38,20 @@ do
 done
 
 # Ensure that the configuration file is an absolute path
+if [ -z "$CONFIG_FILE" ]; then
+    echo "CONFIG_FILE is not set. Please provide a valid configuration file path."
+    exit 1
+fi
+
+echo "Resolving CONFIG_FILE: $CONFIG_FILE"
+
 if command -v realpath >/dev/null 2>&1; then
     CONFIG_FILE=$(realpath "$CONFIG_FILE")
 else
     CONFIG_FILE=$(readlink -f "$CONFIG_FILE")
 fi
+
+echo "Resolved CONFIG_FILE: $CONFIG_FILE"
 
 # Ensure that the confguration file is present
 if test -z "${CONFIG_FILE}"; then
