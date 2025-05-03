@@ -38,8 +38,10 @@ do
 done
 
 # Ensure that the configuration file is an absolute path
-if test -x /usr/bin/realpath; then
-	CONFIG_FILE=$(realpath -s "$CONFIG_FILE" || realpath "$CONFIG_FILE")
+if command -v realpath >/dev/null 2>&1; then
+    CONFIG_FILE=$(realpath "$CONFIG_FILE")
+else
+    CONFIG_FILE=$(readlink -f "$CONFIG_FILE")
 fi
 
 # Ensure that the confguration file is present
