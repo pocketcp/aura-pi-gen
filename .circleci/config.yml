@@ -26,6 +26,12 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Working Directory
+          command: pwd
+      - run:
+          name: List Directory
+          command: ls -la
+      - run:
           name: Build with Docker
           command: ./build-docker.sh
       - store_artifacts:
