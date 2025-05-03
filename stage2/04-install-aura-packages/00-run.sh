@@ -13,9 +13,9 @@ echo "Welcome to Aura OS" > /etc/motd
 # systemctl enable aura.service
 
 # Define theme directory and files
-THEME_NAME="project-oriel"
+THEME_NAME="project-oriel-theme"
 THEME_DIR="/usr/share/plymouth/themes/$THEME_NAME"
-PROJECT_DIR="$(pwd)/stage2/04-install-aura-packages/$THEME_NAME-theme"
+PROJECT_DIR="$(pwd)/stage2/04-install-aura-packages/$THEME_NAME"
 
 # Create theme directory
 mkdir -p "$THEME_DIR"
