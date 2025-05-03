@@ -13,7 +13,7 @@ if \
   ! ${DOCKER} ps    >/dev/null 2>&1 || \
     ${DOCKER} info 2>/dev/null | grep -q rootless \
 ; then
-	DOCKER="sudo ${DOCKER}"
+	DOCKER="${DOCKER}"
 fi
 if ! ${DOCKER} ps >/dev/null; then
 	echo "error connecting to docker:"
@@ -134,7 +134,7 @@ if [[ "${binfmt_misc_required}" == "1" ]]; then
 "\xff\xff\xff\xff\xff\xff\xff\x00\xff\xff\xff\xff\xff\xff\xff\xff\xfe\xff\xff\xff:"\
 "${qemu_arm}:F' > /proc/sys/fs/binfmt_misc/register"
     echo "Registering qemu-arm for binfmt_misc..."
-    sudo bash -c "${reg}" 2>/dev/null || true
+    bash -c "${reg}" 2>/dev/null || true
   fi
 fi
 
