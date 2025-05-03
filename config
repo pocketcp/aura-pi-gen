@@ -1,5 +1,5 @@
 IMG_NAME="project-oriel-01"
-RELEASE="baby-oriel"
+RELEASE="bookworm"
 LOCALE_DEFAULT='en_GB.UTF-8'
 TARGET_HOSTNAME='Aura'
 TIMEZONE_DEFAULT='Asia/Kolkata'
